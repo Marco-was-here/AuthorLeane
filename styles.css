@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #FFF9EF;
+  color: #063760;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  transform: translateY(20px);
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 16px;
+}
+
+.about-text.show {
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+
+.about-image img {
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: translateY(20px);
+}
+
+.about-image img.show {
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+
+/* BOOKS */
+.books {
+  text-align: center;
+}
+
+.books h2 {
+  margin-bottom: 40px;
+}
+
+/* ✅ Responsive grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book img {
+  width: 160px;       /* fixed width for all books */
+  height: 240px;      /* fixed height to match aspect ratio */
+  object-fit: cover;  /* crop/scale the image to fill the box nicely */
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.book:hover img {
+  transform: scale(1.05);
+}
+
+/* animation */
+.book.animate {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.book.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* IMAGE */
+.book img {
+  width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.book:hover img {
+  transform: scale(1.05);
+}
+
+/* SALE TAG */
+.sale-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #bfa46f;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+/* BUTTON */
+.buy-btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #1e1e2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.buy-btn:hover {
+  background: #2f2f4a;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* ATELIER (UPDATED FIX) */
+/* ========================= */
+
+.atelier {
+  text-align: center;
+}
+
+.atelier h2 {
+  margin-bottom: 10px;
+}
+
+.atelier > p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.atelier-box {
+  margin-top: 30px;
+  padding: 40px;
+  border: 1px solid #ddd;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fffdf7;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.atelier-box p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.atelier-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* SERVICES */
+.services-grid {
+  display: flex;
+  align-items: stretch; /* KEY: makes right column match height */
+  gap: 40px;
+}
+
+.service-left,
+.service-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.service-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Each service box */
+.service-item {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  background: #fffdf7; /* soft, premium background */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Headings inside service box */
+.service-item h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #063760;
+}
+
+/* Paragraphs inside service box */
+.service-item p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: #1e1e2f;
+}
+
+/* Bullet list styling */
+.service-item ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 18px;
+  list-style-type: disc;
+}
+
+.service-item ul li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #1e1e2f;
+}
+
+/* Optional: last paragraph tighter */
+.service-item p:last-child {
+  margin-bottom: 0;
+}
+
+.service-right {
+  padding: 20px;
+}
+
+/* ========================= */
+/* CONTACT / BOOKING FORM    */
+/* ========================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 14px;
+}
+
+.contact-subheading p {
+  margin: top 0;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+
+
+/* form container */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  padding: 40px;
+  background: #fffdf7; /* matches service/atelier boxes */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* inputs + textarea */
+.contact input,
+.contact textarea {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  background: #FFF9EF;
+  color: #063760;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* focus state */
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #bfa46f;
+  box-shadow: 0 0 0 3px rgba(191, 164, 111, 0.2);
+}
+
+/* textarea sizing */
+.contact textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* button styled like your buy-btn */
+.contact button {
+  padding: 12px 18px;
+  background: #1e1e2f;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.contact button:hover {
+  background: #2f2f4a;
+  transform: translateY(-2px);
+}
+
+/* CONTACT
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+} */
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    margin: 50px auto;
+  }
+
+  .hero {
+    padding: 40px 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  /* ABOUT STACK */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-image img {
+    width: 140px;
+  }
+
+  /* SERVICES STACK */
+  .services-grid {
+    flex-direction: column;
+  }
+
+  /* BOOK IMAGES SMALLER */
+  .book img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .book img {
+    width: 120px;
+  }
+
+  .buy-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+  }
+}
+
+/* Tablet and mobile: shrink images */
+@media (max-width: 768px) {
+  .book img {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book img {
+    width: 100px;
+    height: 150px;
+  }
+}
