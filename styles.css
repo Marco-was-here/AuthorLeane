@@ -387,6 +387,8 @@ button {
 /* 📱 RESPONSIVE DESIGN */
 /* ========================= */
 
+
+/* TABLET */
 @media (max-width: 768px) {
 
   .container {
@@ -417,12 +419,19 @@ button {
     flex-direction: column;
   }
 
-  /* BOOK IMAGES SMALLER */
+  /* BOOKS */
   .book img {
     width: 140px;
+    height: 210px;
+  }
+
+  /* FORM */
+  .contact form {
+    padding: 30px;
   }
 }
 
+/* MOBILE */
 @media (max-width: 480px) {
 
   .hero h1 {
@@ -430,32 +439,16 @@ button {
   }
 
   .book img {
-    width: 120px;
+    width: 110px;
+    height: 160px;
   }
 
   .buy-btn {
     padding: 8px 12px;
     font-size: 14px;
   }
-}
 
-@media (max-width: 768px) {
-  .services-grid {
-    flex-direction: column;
-  }
-}
-
-/* Tablet and mobile: shrink images */
-@media (max-width: 768px) {
-  .book img {
-    width: 120px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .book img {
-    width: 100px;
-    height: 150px;
+  .contact form {
+    padding: 20px;
   }
 }
